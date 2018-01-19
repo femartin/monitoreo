@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>COP-Monitor</title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://file.myfontastic.com/8gDpcoYQ39j2DpmW5sGWXJ/icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="http://dev.agenciamapache.com/libz/css/hover.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="http://dev.agenciamapache.com/libz/css/animate.css" />
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    var handle = $( "#custom-handle" );
+    $( "#slider" ).slider({
+    min: 1, // min value
+    max: 30, // max value
+      create: function() {
+        handle.text( "PL." + $( this ).slider( "value" ) );
+      },
+      slide: function( event, ui ) {
+        handle.text( "PL." + ui.value );
+      }
+    });
+  } );  
+  </script>
+  <script>
+  $( function() {
+    var handle = $( "#custom-handle2" );
+    $( "#slider2" ).slider({
+    min: 0, // min value
+    max: 99, // max value
+      create: function() {
+        handle.text( "KM " + $( this ).slider( "value" ) + "+000" );
+      },
+      slide: function( event, ui ) {
+        handle.text( "KM 0+" + ui.value*10 + " " );
+      }
+    });
+  } );
+  </script>
+</head>
+<body>
+<div id="maincont">
+<div id="header">
+	<div class="mksearc">
+		<table>
+			<tr>
+				<td>Ir a</td>
+				<td><input type="text" placeholder="km" class="reginpt"></input></td>
+				<td><input type="text" placeholder="mt" class="reginpt"></input></td>
+				<td>Aproximado</td>
+				<td>
+					<button type="submit" class="btn btn-search hvr-grow">
+						<i class="fa fa-search fa-lg"></i>
+					</button>
+				</td>
+				<td style="padding-top: 5px;background: #fff;"><button id="btnFullscreen" type="button"><i class="icon-expand"></i></button></td>
+			</tr>
+		</table>
+	</div>
+	<div class="breadcrumbz">
+		<span class="lostspn"><a href="#" class="breasz">Proyectos</a> / <a href="#" class="breasz">Autopista Río Magdalena</a> / </span>
+		<span class="actvspn">Desarrollo General UF4</span>
+	</div>
+</div>
+<div id="slidercnt">
+	<span class="instrc">Deslice la barra a continuación para cambiar el plano:</span><br>	
+	<div id="slider">
+		<div id="custom-handle" class="ui-slider-handle slider-handle-plano"></div>
+	</div>
+	<div id="imgcnt">
+		<div class="kminf">
+			<span class="kmtx">Plano No.</span>
+			<span class="kmtn">20</span><br>
+		</div>
+		<div class="imgdsc">
+			<span class="imgtt1">Posición aprox:</span><span class="imgtt2">K6 + 600</span><br>
+			<span class="imgtx">
+				Desarrollo General UF4
+			</span>
+		</div>
+	<div id="slider2">
+		<div id="custom-handle2" class="ui-slider-handle slider-handle-punto"></div>
+	</div>
+	</div>
+
+	<br><span class="instrc">Deslice la barra arriba para cambiar la posición en el plano.</span><br>
+	
+</div>
+
+<div class="section group">
+	<div class="col span_1_of_2">
+		<div class="sdbar">
+			<div class="thumbcont">
+				<div class="thumb">
+					<div class="thumbics">
+						<a href="#" class="growlink hvr-grow"><i title="Video Horizonte" class="icon-hz-01" aria-hidden="true"></i></a><br>
+						<a href="#" class="growlink hvr-grow"><i title="Video Horizonte Histórico" class="icon-hz-02" aria-hidden="true"></i></a><br>
+						<a href="#" class="growlink hvr-grow"><i title="Video Cénit" class="icon-hv-01" aria-hidden="true"></i></a><br>
+						<a href="#" class="growlink hvr-grow"><i title="Video Cénit Histórico" class="icon-hv-02" aria-hidden="true"></i></a>
+					</div>
+					<div class="thumbics2">
+						<a href="#" class="growlink hvr-grow"><i title="Fotografía" class="icon-fn-01" aria-hidden="true"></i></a><br>
+						<a href="#" class="growlink hvr-grow"><i title="Fotografía Histórico" class="icon-fn-02" aria-hidden="true"></i></a>
+					</div>
+				</div>
+			</div>
+			<h3 class="tit1">
+				Desarrollo General UF4
+			</h3>
+		</div>
+	</div>
+	<div class="col span_2_of_2">
+		<div class="insd">
+			<table class="tabcnt" style="width: 100%;">
+				<tr class="titles">
+					<td>Estado</td>
+					<td>Usuario</td>
+					<td>Código</td>
+					<td>Descripción</td>
+					<td>Fecha</td>
+					<td>Actualización</td>
+					<td>Genera</td>
+				</tr>
+				<tr class="descs1">
+					<td><i class="fa fa-pencil-square-o fuaz" aria-hidden="true"></i></td>
+					<td>Asogrupo</td>
+					<td>0258</td>
+					<td>Pendiente</td>
+					<td>12-01-14</td>
+					<td>No</td>
+					<td>0258</td>
+				</tr>
+				<tr class="descs2">
+					<td><i class="fa fa-bell fuaz" aria-hidden="true"></i></td>
+					<td>Emrop15</td>
+					<td>0258</td>
+					<td>Aplazado</td>
+					<td>12-01-14</td>
+					<td>No</td>
+					<td>0258</td>
+				</tr>
+				<tr class="descs1">
+					<td><i class="fa fa-file-text fuaz" aria-hidden="true"></i></td>
+					<td>Constructora OK</td>
+					<td>0258</td>
+					<td>En Curso</td>
+					<td>12-01-14</td>
+					<td>No</td>
+					<td>0258</td>
+				</tr>
+				<tr class="descs2">
+					<td><i class="fa fa-pencil-square-o fuaz" aria-hidden="true"></i></td>
+					<td>Constructora OK</td>
+					<td>0258</td>
+					<td>Aprobado</td>
+					<td>03-01-18</td>
+					<td>No</td>
+					<td>0258</td>
+				</tr>
+				<tr class="descs1">
+					<td><i class="fa fa-pencil-square-o fuaz" aria-hidden="true"></i></td>
+					<td>Asogrupo</td>
+					<td>0258</td>
+					<td>Pendiente</td>
+					<td>12-01-14</td>
+					<td>No</td>
+					<td>0258</td>
+				</tr>
+				<tr class="descs2">
+					<td><i class="fa fa-bell fuaz" aria-hidden="true"></i></td>
+					<td>Emrop15</td>
+					<td>0258</td>
+					<td>Aplazado</td>
+					<td>12-01-14</td>
+					<td>No</td>
+					<td>0258</td>
+				</tr>
+				<tr class="descs1">
+					<td><i class="fa fa-pencil-square-o fuaz" aria-hidden="true"></i></td>
+					<td>Constructora OK</td>
+					<td>0258</td>
+					<td>Aprobado</td>
+					<td>03-01-18</td>
+					<td>No</td>
+					<td>0258</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>
+</div>
+<div class="foots">
+</div>
+<script>
+function toggleFullscreen(elem) {
+  elem = elem || document.documentElement;
+  if (!document.fullscreenElement && !document.mozFullScreenElement &&
+    !document.webkitFullscreenElement && !document.msFullscreenElement) {
+    if (elem.requestFullscreen) {
+      elem.requestFullscreen();
+    } else if (elem.msRequestFullscreen) {
+      elem.msRequestFullscreen();
+    } else if (elem.mozRequestFullScreen) {
+      elem.mozRequestFullScreen();
+    } else if (elem.webkitRequestFullscreen) {
+      elem.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
+    }
+  } else {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    } else if (document.msExitFullscreen) {
+      document.msExitFullscreen();
+    } else if (document.mozCancelFullScreen) {
+      document.mozCancelFullScreen();
+    } else if (document.webkitExitFullscreen) {
+      document.webkitExitFullscreen();
+    }
+  }
+}
+
+document.getElementById('btnFullscreen').addEventListener('click', function() {
+  toggleFullscreen();
+});
+
+document.getElementById('exampleImage').addEventListener('click', function() {
+  toggleFullscreen(this);
+});
+</script>
+</body>
+</html>
